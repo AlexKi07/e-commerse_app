@@ -1,6 +1,6 @@
 # ecommerce_app/crud.py
 from sqlalchemy.orm import Session
-import models
+from . import models
 from datetime import datetime
 
 # ----------------- Customer CRUD -----------------

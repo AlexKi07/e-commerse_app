@@ -1,21 +1,21 @@
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
-from database import SessionLocal, engine
-import models
-from crud import (
+# Add the root of the project to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+from lib.db.database import SessionLocal, engine
+from lib.db import models
+from lib.db.crud import (
     create_customer,
     create_category,
     create_product,
     create_order
 )
 
-
 # Create all tables
 models.Base.metadata.create_all(bind=engine)
 
-# Get DB session
 db = SessionLocal()
 
 # Clear existing data (optional)
