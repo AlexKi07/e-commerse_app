@@ -13,7 +13,7 @@ This project simulates a backend for an E-commerce platform. Users can manage in
 ## ⚙️ Setup Instructions
 
 1. **Clone the repository**  
-   git clone https://github.com/yourusername/e-commerse_app.git
+   git clone https://github.com/AlexKi07/e-commerse_app.git
    cd e-commerse_app
 
 2. **Install dependencies using Pipenv**
