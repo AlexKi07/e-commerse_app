@@ -41,9 +41,9 @@ categories = [
 
 # Seed products
 products = [
-    create_product(db, name="Laptop", price=999.99, category_id=categories[0].id),
-    create_product(db, name="Headphones", price=199.99, category_id=categories[0].id),
-    create_product(db, name="Novel", price=14.99, category_id=categories[1].id),
+    create_product(db, name="Laptop", price=999999.99, category_id=categories[0].id),
+    create_product(db, name="Headphones", price=1999.99, category_id=categories[0].id),
+    create_product(db, name="Novel", price=3000.00, category_id=categories[1].id),
     create_product(db, name="T-Shirt", price=24.99, category_id=categories[2].id)
 ]
 

@@ -1,9 +1,9 @@
-
+#  NB: MUST BE MORE THAN 12 **
 from sqlalchemy.orm import Session
 from . import models
 from datetime import datetime
 
-# ----------------- Customer CRUD -----------------
+#  Customer CRUD 
 def create_customer(db: Session, name: str, email: str):
     customer = models.Customer(name=name, email=email)
     db.add(customer)
@@ -32,7 +32,7 @@ def delete_customer(db: Session, customer_id: int):
         db.commit()
     return customer
 
-# ----------------- Category CRUD -----------------
+#  Category CRUD 
 def create_category(db: Session, name: str):
     category = models.Category(name=name)
     db.add(category)
@@ -60,7 +60,7 @@ def delete_category(db: Session, category_id: int):
         db.commit()
     return category
 
-# ----------------- Product CRUD -----------------
+#  Product CRUD 
 def create_product(db: Session, name: str, price: float, category_id: int):
     product = models.Product(name=name, price=price, category_id=category_id)
     db.add(product)
@@ -90,7 +90,7 @@ def delete_product(db: Session, product_id: int):
         db.commit()
     return product
 
-# ----------------- Order and OrderItem CRUD -----------------
+#  Order and OrderItem CRUD 
 def create_order(db: Session, customer_id: int, items: list):
     """
     items: list of dicts, e.g., [{'product_id': 1, 'quantity': 2}, ...]
