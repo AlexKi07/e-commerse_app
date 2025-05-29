@@ -48,7 +48,7 @@ def main():
             print("Goodbye!")
             break
 
-        # -------- Customers --------
+        # The Customers 
         elif choice == "1":
             name = input("Enter customer name: ").strip()
             email = input("Enter customer email: ").strip()
@@ -90,7 +90,7 @@ def main():
             else:
                 print("Customer not found.")
 
-        # -------- Categories --------
+        # The Categories 
         elif choice == "6":
             name = input("Enter category name: ").strip()
             category = crud.create_category(db, name)
@@ -130,7 +130,7 @@ def main():
             else:
                 print("Category not found.")
 
-        # -------- Products --------
+        # The Products 
         elif choice == "11":
             name = input("Enter product name: ").strip()
             price_str = input("Enter product price: ").strip()
@@ -193,7 +193,7 @@ def main():
             else:
                 print("Product not found.")
 
-        # -------- Orders --------
+        #  Orders 
         elif choice == "16":
             cust_id = input_int("Enter customer ID placing the order: ")
             customer = crud.get_customer_by_id(db, cust_id)
